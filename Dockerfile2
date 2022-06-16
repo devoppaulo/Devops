@@ -1,0 +1,11 @@
+FROM jenkins/jenkins
+
+USER root
+
+#RUN curl https://bootstrap.pypa.io/get-pip.py -o get-p
+#RUN python get-pip.py
+#RUN  pip install ansible --upgrade
+
+RUN apt-get update && apt-get -y install ansible
+
+USER jenkins
